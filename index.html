@@ -69,6 +69,11 @@
     <p>Zihan Wang (website design)</p>
     <p>The main design of the website, and the experimental content displayed on the website. Work with other team members to write website content.</p>
     <br>
+    <h1>Week 1</h1>
+    <p>The group members discussed the selection of projects, and the selected items were key components such as lithium batteries, temperature control systems, battery charge and discharge testers, and battery management systems, and designed control algorithms to optimize the charging and discharging process, extend battery life, improve charging and discharging efficiency, and investigate the impact of time and temperature on battery performance. The project is then assigned to four sections, with each member choosing their own task and getting started.</p>
+    <br>
+    <h1>Week 2</h1>
+    <p>The core components are selected and the simulation circuit diagram is drawn, and the feasibility and correctness of the circuit design are discussed and tested.</p>
     <h2>Part 1 Experimental process</h2>
     <img src="1.png" alt="展示图片" width="1000" height="500">
     <p>Figure 1 Monolithic circuitry</p>
@@ -77,7 +82,24 @@
     <h2>Procedure</h2>
     <p>Matlab, Simulink</p>
     <h2>Equipment</h2>
-    <p>Figure 1</p>
+    <p>We need to study the temperature and aging’s influence, so it’s needed to set some parameters for the temperature and time. Fortunately, the batteries module has this setting inside and we can change it to do different simulations. In order to check the curve of current and voltage of the batteries, the output ports are also needed. The components are shown in detail on below:</p>
+    <p>1.Voltage Input (V_bat): Set the rated voltage for Li batteries.</p>
+    <p>2.Output Power (5000):Power is set in over or below 0 means it is charging or discharging, in the experiment this means Li batteries are charging with power supply or Li batteries are used for power source.</p>
+    <p>3.Multipliers and Dividers (x, /):Used for calculations such as determining the power per single battery cell based on the output power, cascade, and parallel configurations.</p>
+    <p>4.Mode Controllers:Control the mode based on the power value. If power (P) is larger than  zero, it directs the flow to calculate equivalent resistance. If P is less than zero, it calculates charging current.</p>
+    <p>5.Equivalent Resistance Calculation:Determines the equivalent resistance based on input power and various control mechanisms (e.g., minimum and maximum resistance control).</p>
+    <p>6.Minimum and Maximum Resistor Control:Ensures that the equivalent resistance stays within specified limits (0.1 and 1000 ohms) by using comparators and switches.</p>
+    <p>7.Switches and Control Logic:Used to determine the charging path, depending on the charging control signal and equivalent resistance input.</p>
+    <p>8.Equivalent Variable Resistor (R):Represents an adjustable resistance value based on calculations, which can be modified dynamically to control charging characteristics.</p>
+    <p>9.Temperature Source:Set the working temperature.</p>
+    <p>10.Battery Model:Contains battery-related state parameters such as State of Charge (SOC), current, voltage, and temperature. These values are output to monitor the battery’s condition. It can also set the initial and inner temperature and aging.</p>
+    <p>Output Ports for Monitoring (SOC, Current, Voltage, Battery Temperature):
+       SOC (%): Shows the battery’s state of charge as a percentage.
+       Current (A): Displays the current flowing through the battery.
+       Voltage (V): Indicates the voltage level of the battery.
+       Battery Temperature (°C): Shows the current temperature of the battery cell.</p>
+    <p>Matlab, Simulink</p>
+    <p>Matlab, Simulink</p>
     <h2>Actual Tasks</h2>
     <p>The SOC, output current, output voltage, battery temperature and other parameters of the LiFeP4 battery were obtained through MATLAB simulation circuit diagram at three different temperatures of -10 25 60, and the influence of temperature on battery management was analyzed through these parameters.</p>
     <h2>Circuit Design</h2> 
@@ -86,8 +108,12 @@
     <img src="3.png" alt="展示图片" width="1000" height="500">
     <p>Figure 3 Control Circuit</p>
     <br>
+    <h1>Week 3</h1>
+    <p>This week, we will take measurements and records to discuss the correctness of the data. Analyze and summarize the data.</p>
     <h2>Part 2 Experiment results and analysis</h2>
     <br>
+    <h1>Week 4</h1>
+    <p>Make a PPT and website, and give the first trial lecture for the presentation.</p>
     <h2>Conclusion</h2>
     <br>
     <h2>Appendix</h2>
