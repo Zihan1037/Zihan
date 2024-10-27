@@ -75,9 +75,65 @@
     <h1>Week 2</h1>
     <p>The core components are selected and the simulation circuit diagram is drawn, and the feasibility and correctness of the circuit design are discussed and tested.</p>
     <h2>Part 1 Experimental process</h2>
-    <a href="1.png">
-       <img src="1.png" alt="展示图片" width="800" height="450">
-    </a>
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击图片放大并关闭</title>
+    <style>
+        /* 小图的样式 */
+        img {
+            width: 800px;
+            height: 450px;
+            cursor: pointer;
+        }
+
+        /* 隐藏的大图容器，背景遮罩 */
+        #overlay {
+            display: none; /* 初始时隐藏 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* 背景半透明 */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* 大图的样式 */
+        #overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 小图片 -->
+    <img src="1.png" alt="展示图片" id="thumbnail" onclick="showLargeImage()">
+
+    <!-- 大图的弹出容器 -->
+    <div id="overlay" onclick="hideLargeImage()">
+        <img src="1.png" alt="放大图片">
+    </div>
+
+    <script>
+        // 显示大图
+        function showLargeImage() {
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
+        // 隐藏大图
+        function hideLargeImage() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
     <p>Figure 1 Monolithic circuitry</p>
     <h2>Experimental Approach</h2>
     <p>Connect the experimental setup as shown in Figure 1 Experimental process. The function of this model is mainly to charge and discharge the LiFeP4 battery at the set power, and monitor the SOC, output current, output voltage, battery temperature and other parameters of the battery in real time.</p>
