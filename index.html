@@ -287,6 +287,35 @@
     <h1>Week 3</h1>
     <p>This week, we will take measurements and records to discuss the correctness of the data. Analyze and summarize the data.</p>
     <h2>Part 2 Experiment results and analysis</h2>
+    <h3>1. Effect of temperature change on battery performance</h3>
+    <p>Low temperature condition (2°C):</p>
+    <p>(1) The SOC curve (such as Figure 1-1 and 3-1) shows that the SOC increases slowly during charging and decreases slowly during discharging, indicating that the battery's charging and discharging efficiency is significantly reduced at low temperatures. This is due to the slow chemical reaction rate of the battery under low temperature conditions.</p>
+    <p>(2) The output current curve (such as Figure 1-2 and 3-2) shows that the charging and discharging output current is low under low temperature, which indicates that the battery's discharge capacity is limited at low temperatures and cannot provide high instantaneous power.</p>
+    <p>(3) The output voltage curve (such as Figure 1-3 and 3-3) also shows that the battery's voltage drop is more obvious under low temperature conditions, which may be due to increased internal resistance.</p>
+    <p>(4) The battery cell temperature curve (such as Figure 1-4 and 3-4) shows that the battery temperature fluctuates less under low temperature conditions and more under high temperature conditions.</p>
+    <p>Summary: Low temperature will reduce the battery's charging and discharging efficiency and increase internal resistance. The BMS needs to reduce the current demand under low temperature conditions and increase the battery's operating temperature through the thermal management system to improve performance.</p>
+    <br>
+    <p>High temperature conditions (60°C):</p>
+    <p>(1) The SOC curves (such as Figure 2-1 and 4-1) show that the SOC drops rapidly and increases faster during charging, indicating that the battery charges and discharges faster at high temperatures and that the battery has a higher discharge efficiency.</p>
+    <p>(2) The output current curves (such as Figure 2-2 and 4-2) show that the battery discharge current is higher at high temperatures, which means that the battery can provide higher power output under high temperature conditions.</p>
+    <p>(3) The output voltage curves (such as Figure 2-3 and 4-3) show that the voltage is relatively stable, but long-term high temperature operation may cause excessive voltage fluctuations or overheating problems.</p>
+    <p>(4) The cell temperature curves (such as Figure 2-4 and 4-4) show that the battery temperature rises rapidly. Excessive temperature may cause the battery to overheat, shorten the battery life and increase safety risks.</p>
+    <p>Summary: High temperature accelerates the battery charging and discharging process, but it may also cause the battery to overheat and accelerate aging. The BMS needs to monitor the temperature to prevent the battery from entering an overheating state and take cooling measures when necessary.</p>
+    <h3>Experimental data on the effect of temperature on battery performance were studied</h3>
+    <!-- A link to download the simulation  -->
+    <a href="temperature.pdf" download>download temperature.pdf file</a>
+    <br>
+    <h3>2. Impact of battery aging on performance</h3>
+    <p>By analyzing data at different times of use at 25°C (e.g., 300 times, 1000 times), we can see the impact of aging on battery performance:</p>
+    <p>Comparison between new and aged batteries (Figure 1-1 vs Figure 2-1):</p>
+    <p>(1) The SOC curve (e.g., Figure 1-1, 2-1) shows that as the number of charge and discharge cycles increases, the SOC decreases faster, indicating that the available capacity of the battery decreases.</p>
+    <p>(2) The output current curve (e.g., Figure 1-2, 2-2) shows that after battery aging, the output current gradually decreases, and the aged battery cannot provide as much current as a new battery.</p>
+    <p>(3) The output voltage curve (e.g., Figure 1-3, 2-3) shows that the voltage is more likely to drop during discharge, indicating that the voltage stability of the battery decreases and the internal resistance increases after aging.</p>
+    <p>(4) The cell temperature curve (e.g., Figure 1-4, 2-4) shows that the temperature of the aged battery rises faster, and the thermal management of the aged battery becomes more difficult and prone to overheating.</p>
+    <p>Summary: Battery aging can lead to problems such as capacity attenuation, increased internal resistance and temperature rise. BMS needs to introduce health status monitoring and dynamically adjust the charging cut-off voltage and maximum discharge current to adapt to battery aging.</p>
+    <h3>Experimental data of the effect of battery usage times on battery performance</h3>
+    <!-- A link to download the simulation  -->
+    <a href="usage times.pdf" download>download usage times.pdf file</a>
     <br>
     <h1>Week 4</h1>
     <p>Make a PPT and website, and give the first trial lecture for the presentation.</p>
